@@ -14,7 +14,6 @@ const   Car_detailsP = () => {
             <div id="main" >
                 <div className="inner">
                     <Car_details/>
-                    <Footer2/>
                 </div>
             </div>
             <div  id='footer' className='inner'>
