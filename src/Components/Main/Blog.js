@@ -1,9 +1,10 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Blog = () => {
     return(
         <div>
-            <h2 className="h2">Blog</h2>
+            <h2 className="h2">Блог</h2>
 
             <div className="row">
                 <div className="col-sm-4 text-center">
@@ -34,8 +35,8 @@ const Blog = () => {
                 </div>
             </div>
 
-            <p className="text-center"><a href="blog.html">Read More &nbsp;<i
-                className="fa fa-long-arrow-right"></i></a></p>
+            <p className="text-center"><Link to="/blog">Читать далее &nbsp;<i
+                className="fa fa-long-arrow-right"></i></Link></p>
         </div>
     )
 }

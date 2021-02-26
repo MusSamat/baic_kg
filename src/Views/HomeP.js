@@ -1,6 +1,6 @@
 import React from 'react'
-import Main from "../Main/Main"
-import Footer from "../Footer/Footer";
+import Main from "../Components/Main/Main"
+import Footer from "../Components/Footer/Footer";
 
 const HomeP = () => {
     return(

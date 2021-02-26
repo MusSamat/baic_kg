@@ -4,32 +4,35 @@ import './Components/Header/Header'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Menu from "./Components/Header/Menu";
-import HomeP from "./Components/Views/HomeP";
-import AboutP from "./Components/Views/AboutP";
-import TeamP from "./Components/Views/TeamP";
-import TestimonialsP from "./Components/Views/TestimonialsP";
-import ContactsP from "./Components/Views/ContactsP";
-import CarsP from "./Components/Views/CarsP";
+import HomeP from "./Views/HomeP";
+import AboutP from "./Views/AboutP";
+import TeamP from "./Views/TeamP";
+import TestimonialsP from "./Views/TestimonialsP";
+import ContactsP from "./Views/ContactsP";
+import CarsP from "./Views/CarsP";
+import Car_detailsP from "./Views/Car_detailsP";
 
 
-function App() {
-  return (
-      <Router>
-          <Menu/>
-          <div className="is-preload" id="wrapper">
-              <Header/>
-              <Switch>
-                  <Route exact path='/' component={HomeP}/>
-                  <Route exact path='/cars' component={CarsP}/>
-                  <Route exact path='/about' component={AboutP}/>
-                  <Route exact path='/team' component={TeamP}/>
-                  <Route exact path='/testimonials' component={TestimonialsP}/>
-                  <Route exact path='/contacts' component={ContactsP}/>
-
-              </Switch>
-          </div>
-      </Router>
-  );
+class App extends React.Component {
+    render() {
+        return (
+            <Router>
+                <Menu/>
+                <div className="is-preload" id="wrapper">
+                    <Header/>
+                    <Switch>
+                        <Route exact path='/' component={HomeP}/>
+                        <Route exact path='/cars' component={CarsP}/>
+                        <Route exact path='/about' component={AboutP}/>
+                        <Route exact path='/team' component={TeamP}/>
+                        <Route exact path='/testimonials' component={TestimonialsP}/>
+                        <Route exact path='/contacts' component={ContactsP}/>
+                        <Route exact path='/car_details' component={Car_detailsP}/>
+                    </Switch>
+                </div>
+            </Router>
+        );
+    }
 }
 
 

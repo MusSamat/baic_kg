@@ -21,8 +21,8 @@ const Footer2 = () => {
                     </section>
 
                     <ul className="copyright">
-                        <li>Copyright © 2020 Company Name</li>
-                        <li>Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></li>
+                        <li>Copyright © 2021 SigmaSoft</li>
+                        <li> : <a href="https://www.google.com/">sigmasoft.io</a></li>
                     </ul>
                 </div>
             </footer>

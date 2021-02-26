@@ -5,7 +5,7 @@ const About = () => {
         <div id="main">
             <div className="inner">
                 { <br/>}
-                <h1>About Us</h1>
+                <h1>О нас</h1>
 
 
                 <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque

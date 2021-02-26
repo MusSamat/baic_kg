@@ -6,15 +6,20 @@ const Menu = () => {
 
         <nav id="menu">
             <div className="inner">
-                <h2>Menu</h2>
+                <div style={{display: 'flex', justifyContent: 'center', marginBottom: 50,
+                    fontSize: 30,
+                    fontWeight: "bold"
+                }}>
+                    <span>BAIC MOTORS</span>
+                </div>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to='/cars'>Cars</Link></li>
-                    <li><Link  to="/about">About</Link></li>
-                    <li><Link to="/team">Team</Link></li>
+                    <li><Link to="/">Главная</Link></li>
+                    <li><Link to='/cars'>Наши автомобили</Link></li>
+                    <li><Link  to="/about">О нас</Link></li>
+                    <li><Link to="/team">Наша Команда</Link></li>
                     {/*<li><Link to="/blog">Blog</Link></li>*/}
-                    <li><Link to="/testimonials">Testimonials</Link></li>
-                    <li><Link to="/contacts">Contacts</Link></li>
+                    <li><Link to="/testimonials">Отзывы</Link></li>
+                    <li><Link to="/contacts">Контакты</Link></li>
                 </ul>
             </div>
         </nav>

@@ -1,9 +1,10 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Testimonials = () =>{
     return(
         <div>
-            <h2 className="h2">Testimonials</h2>
+            <h2 className="h2">Отзывы</h2>
 
             <div className="row">
                 <div className="col-sm-6 text-center">
@@ -25,8 +26,8 @@ const Testimonials = () =>{
                 </div>
             </div>
 
-            <p className="text-center"><a href="testimonials.html">Read More &nbsp;<i
-                className="fa fa-long-arrow-right"></i></a></p>
+            <p className="text-center"><Link to="/testimonials">Читать  далее &nbsp;<i
+                className="fa fa-long-arrow-right"></i></Link></p>
         </div>
     )
 }
