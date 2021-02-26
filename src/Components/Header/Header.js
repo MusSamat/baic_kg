@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
-        <header id="header" style={{height: 150}}>
+        <header id="header" >
             <div className="inner">
                 <Link to="/" className="logo">
                     <span><img src="images/baic/baic_logo.png" alt="baic" style={{width: 120, height: 70}}/></span> <span className="title">BAIC Motors</span>
