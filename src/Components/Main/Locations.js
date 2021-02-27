@@ -3,8 +3,8 @@ import { YMaps, Map, Placemark } from "react-yandex-maps";
 
 const Locations = () =>  {
     const mapData = {
-        center: [40.09213324, 76.573856],
-        zoom: 6 ,
+        center: [42.870981, 74.569466],
+        zoom: 12,
     };
 
     const coordinates = [
