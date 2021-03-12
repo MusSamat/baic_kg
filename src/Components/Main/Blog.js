@@ -1,10 +1,36 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import GetData from "../../services/GetData";
 
 const Blog = () => {
+
+    const getBlog = new GetData()
+
+    const [blog, setBlog] = useState([])
+
+    useEffect(() => {
+        getBlog.getData('/api/v1/blog').then(res => {
+            setBlog(res)
+        })
+    }, [])
+
+    console.log(blog)
     return(
         <div>
             <h2 className="h2">Блог</h2>
+
+
+            {blog.map((item, i) => (
+
+                <div key={i}>
+                    <h2>{item.title}</h2>
+                    <div>
+                        <img src={'http://127.0.0.1:8000'+ item.image} alt="fjalksd"/>
+                    </div>
+                    <div>{item.description}</div>
+                </div>
+            ))}
+
 
             <div className="row">
                 <div className="col-sm-4 text-center">

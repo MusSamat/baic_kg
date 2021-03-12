@@ -3891,7 +3891,7 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border: 1px solid #ffffff;
 }
 
 .nav-tabs .nav-item {

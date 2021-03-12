@@ -6,7 +6,8 @@ const Header = () => {
         <header id="header" >
             <div className="inner">
                 <Link to="/" className="logo">
-                    <span><img src="images/baic/baic_logo.png" alt="baic" style={{width: 120, height: 70}}/></span> <span className="title">BAIC Motors</span>
+                    <span><img src="images/baic/baic_logo.png" alt="baic" style={{width: 120, height: 70}}/></span>
+                    <span>BAIC Motors</span>
                 </Link>
                 <nav>
                     <ul>

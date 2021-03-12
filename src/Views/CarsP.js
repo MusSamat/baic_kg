@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import Banner from "../Components/Main/Banner";
 import Cars from "../Components/Main/Cars";
 import Footer2 from "../Components/Footer/Footer2";
+import Categories from "../Components/Main/Category/Categories";
 
 
 
@@ -16,6 +17,7 @@ const CarsP = () => {
                     <div className="inner">
                         <h1>Cars</h1>
                         <Banner/>
+                        <Categories/>
                         <Cars/>
                     </div>
                 </div>

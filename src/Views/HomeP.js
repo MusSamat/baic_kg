@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import Main from "../Components/Main/Main"
-import Footer from "../Components/Footer/Footer";
+import Footer2 from "../Components/Footer/Footer2";
 
 const HomeP = () => {
     useEffect(() => {
@@ -9,7 +9,7 @@ const HomeP = () => {
     return(
         <>
             <Main/>
-            <Footer/>
+            <Footer2/>
         </>
     )
 }
