@@ -1,33 +1,19 @@
 import React, {useEffect, useState} from 'react'
 import GetData from "../../services/GetData";
 
-const Car_details = () => {
-
+const Car_details = (props) => {
+    console.log(props.id)
     const getCarDet = new GetData()
 
-    const [cars, setCars] = useState([])
-    const [image, setImages] = useState([])
-    const [features, setFeatures] = useState([])
+    const [cars, setCars] = useState({feature: []})
+    const [image, setImage] = useState([])
     useEffect(() => {
-        getCarDet.getData('/api/v1/car/2/').then(res => {
+        getCarDet.getData('/api/v1/car/'+ props.id + '/' ).then(res => {
             const c = res
-            console.log(c.id)
-            c.images = c.images.map(i => i[1])
-            setImages(c.images)
-            c.feature = c.feature.map(i => {
-                const keys = []
-                for (const [key, value] of Object.entries(i)) {
-                    if (value && (typeof value) === 'boolean') {
-                        keys.push(key)
-                    }
-                }
-                return keys
-            })
             setCars(c)
-            setFeatures(c.feature)
+            setImage(c.images)
         })
     }, [])
-
 
     return (
         <>
@@ -37,40 +23,40 @@ const Car_details = () => {
                     <div className="col-lg-7">
                         <div id="carouselIndicators" className="carousel slide" data-ride="carousel">
                             <ol className="carousel-indicators">
-                                {image.map((item, i) => (
-                                    <li data-target="#carouselExampleIndicators" data-slide-to={item.id} className="active"  key={i}></li>
-                                ))}
-                            </ol>
-                            <div className="carousel-inner">
-
-                                {image.map((item,i) => {
-                                    if(i === 0){
+                                {image.map((item, i) => {
+                                    if (i === 0) {
                                         return (
-                                            <div className="carousel-item active" key={i}>
-                                                <img className="d-block w-100" src={'http://127.0.0.1:8000' + item}
-                                                     alt={item.id + "slide"}/>
-                                            </div>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to={i}
+                                                className="active" key={i}></li>
                                         )
-                                    }else {
+                                    } else {
                                         return (
-                                            <div className="carousel-item" key={i}>
-                                                <img className="d-block w-100" src={'http://127.0.0.1:8000' + item}
-                                                     alt={item.id + "slide"}/>
-                                            </div>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to={i}
+                                                key={i}></li>
                                         )
                                     }
                                 })}
 
-                                {/*<div className="carousel-item active">*/}
-                                {/*    <img className="d-block w-100" src={'http://127.0.0.1:8000' + image[0]} alt="First slide"/>*/}
-                                {/*</div>*/}
-                                {/*<div className="carousel-item">*/}
-                                {/*    <img className="d-block w-100" src={'http://127.0.0.1:8000' + image[0]}*/}
-                                {/*         alt="Second slide"/>*/}
-                                {/*</div>*/}
-                                {/*<div className="carousel-item">*/}
-                                {/*    <img className="d-block w-100" src={'http://127.0.0.1:8000' + image[0]} alt="Third slide"/>*/}
-                                {/*</div>*/}
+                            </ol>
+                            <div className="carousel-inner">
+
+                                {image.map((item, i) => {
+                                    if (i === 0) {
+                                        return (
+                                            <div className="carousel-item active" key={i}>
+                                                <img className="d-block w-100" src={'http://127.0.0.1:8000' + item}
+                                                     alt={i + "slide"}/>
+                                            </div>
+                                        )
+                                    } else {
+                                        return (
+                                            <div className="carousel-item" key={i}>
+                                                <img className="d-block w-100" src={'http://127.0.0.1:8000' + item}
+                                                     alt={i + "slide"}/>
+                                            </div>
+                                        )
+                                    }
+                                })}
                             </div>
                             <a className="carousel-control-prev" href="#carouselIndicators" role="button"
                                data-slide="prev">
@@ -88,18 +74,13 @@ const Car_details = () => {
                     <div className="col-lg-5">
                         <h3 style={{paddingLeft: 40}}> Функции</h3>
                         <ul style={{paddingLeft: 40}}>
-                            {/*{features.map((item, i) => (*/}
-                            {/*     <li key={i}>*/}
-                            {/*         <img src="./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} alt="todo"/>*/}
-                            {/*         {item}*/}
-                            {/*     </li>*/}
-                            {/*    )*/}
-                            {/*)}*/}
-                            <li><img src="./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} alt="todo"/>ljljfldskjl</li>
-                            <li><img src="./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} alt="todo"/>ljljfldskjl</li>
-                            <li><img src="./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} alt="todo"/>ljljfldskjl</li>
-                            <li><img src="./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} alt="todo"/>ljljfldskjl</li>
-                            <li><img src="./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} alt="todo"/>ljljfldskjl</li>
+                            {cars.feature.map((item, i) => (
+                                 <li key={i}>
+                                     <img src="/./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} />
+                                     {item.title}
+                                 </li>
+                                )
+                            )}
                         </ul>
                     </div>
                 </div>

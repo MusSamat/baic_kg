@@ -1,24 +1,51 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import GetData from "../../services/GetData";
 
 
 const Carousel = () => {
+    const getBannerImage = new GetData()
+    const [bannerImage, setBannerImage] = useState([])
+
+
+    useEffect(() => {
+        getBannerImage.getData('/api/v1/banner').then(res => {
+            setBannerImage(res)
+        })
+    }, [])
     return (
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" >
             <ol className="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                {bannerImage.map((item, i) => {
+                    if( i === 0 || item.image.length === null) {
+                        return (
+                            <li data-target="#carouselExampleIndicators" data-slide-to={i} className="active" key={i}></li>
+                        )
+                    }else {
+                        return (
+                            <li data-target="#carouselExampleIndicators" data-slide-to={item.id} key={i}></li>
+                        )
+                    }
+                })}
             </ol>
             <div className="carousel-inner" >
-                <div className="carousel-item active">
-                    <img className="d-block w-100 "  src="images/baic/carousel/X55.png" alt="First slide"/>
-                </div>
-                <div className="carousel-item">
-                    <img className="d-block w-100"   src="images/baic/carousel/BJ40.png" alt="Second slide"/>
-                </div>
-                <div className="carousel-item">
-                    <img className="d-block w-100"  src="images/baic/carousel/X25.png" alt="Third slide"/>
-                </div>
+                {bannerImage.map((item, i) => {
+                    if(i === 0){
+                        return (
+                            <div className="carousel-item active" key={i}>
+                                { item.image.length > 0 ? <img className="d-block w-100 "  src={'http://127.0.0.1:8000'
+                                + item.image} alt={i + 'slide'}/> :
+                                    <img src={'http://127.0.0.1:8000'
+                                    + '/media/cars/notFoundImage.png'} alt="car photo"/>}
+                            </div>
+                        )
+                    }else {
+                        return (
+                            <div className="carousel-item" key={i}>
+                                <img className="d-block w-100 "  src={'http://127.0.0.1:8000' + item.image} alt={item.id + 'slide'}/>
+                            </div>
+                        )
+                    }
+                })}
             </div>
             <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

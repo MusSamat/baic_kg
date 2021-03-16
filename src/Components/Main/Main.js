@@ -2,7 +2,7 @@ import React from "react";
 import About from "./About";
 import Carousel from "./Carousel";
 import Cars from "./Cars";
-import Testimonials from "./Testimonials";
+import Testimonials from "./Testimonials/Testimonials";
 import Blog from "./Blog";
 
 
@@ -13,8 +13,8 @@ const Main = () => {
             <div className="inner">
                 <About/>
                 <Cars/>
-                <Testimonials/>
                 <Blog/>
+                <Testimonials/>
             </div>
         </div>
     )

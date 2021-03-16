@@ -13,56 +13,22 @@ const Blog = () => {
             setBlog(res)
         })
     }, [])
-
-    console.log(blog)
     return(
         <div>
             <h2 className="h2">Блог</h2>
-
-
-            {blog.map((item, i) => (
-
-                <div key={i}>
-                    <h2>{item.title}</h2>
-                    <div>
-                        <img src={'http://127.0.0.1:8000'+ item.image} alt="fjalksd"/>
-                    </div>
-                    <div>{item.description}</div>
-                </div>
-            ))}
-
-
             <div className="row">
-                <div className="col-sm-4 text-center">
-                    <img src="images/blog-1-720x480.jpg" className="img-fluid" alt=""/>
-
-                    <h2 className="m-n"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                    </h2>
-
-                    <p> John Doe &nbsp;|&nbsp; 12/06/2020 10:30</p>
-                </div>
-
-                <div className="col-sm-4 text-center">
-                    <img src="images/blog-2-720x480.jpg" className="img-fluid" alt=""/>
-
-                    <h2 className="m-n"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                    </h2>
-
-                    <p> John Doe &nbsp;|&nbsp; 12/06/2020 10:30</p>
-                </div>
-
-                <div className="col-sm-4 text-center">
-                    <img src="images/blog-3-720x480.jpg" className="img-fluid" alt=""/>
-
-                    <h2 className="m-n"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                    </h2>
-
-                    <p> John Doe &nbsp;|&nbsp; 12/06/2020 10:30</p>
-                </div>
+                {blog.map((item, i) => (
+                    <div className="col-sm-4 text-center" key={i}>
+                        <img src={'http://127.0.0.1:8000'+ item.image} className="img-fluid"  alt="fjalksd"/>
+                        <h2 className="m-n"><a href="#">{item.title}</a></h2>
+                        <div>{item.description}</div>
+                        <p> John Doe &nbsp;|&nbsp; {item.created_at}</p>
+                    </div>
+                    ))}
             </div>
-
-            <p className="text-center"><Link to="/blog">Читать далее &nbsp;<i
-                className="fa fa-long-arrow-right"></i></Link></p>
+            <div style={{display: "flex", justifyContent: "center", marginTop: 20}}>
+                <Link to="/blog"><button>Подробнее <i className='fa fa-long-arrow-right'></i></button></Link>
+            </div>
         </div>
     )
 }

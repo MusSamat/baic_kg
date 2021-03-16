@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import Banner from "../Components/Main/Banner";
-import Testimonials from "../Components/Main/Testimonials";
+import Testimonials from "../Components/Main/Testimonials/Testimonials";
 import Footer2 from "../Components/Footer/Footer2";
 import Team from "../Components/Main/Team";
 

@@ -1,50 +1,53 @@
-import React from "react";
-// import {Link} from "react-router-dom";
-import Categories from "./Category/Categories";
+import React, {useEffect, useState} from "react";
+import GetData from "../../services/GetData";
 import {Link} from "react-router-dom";
 
 const Cars = () => {
+
+    const getAllCars = new GetData()
+    const [getCars, setGetCars] = useState([])
+
+
+    useEffect(() => {
+        getAllCars.getData('/api/v1/car').then(res => {
+            setGetCars(res)
+        })
+    }, [])
+
+
+    console.log(getCars.length)
+
     return (
         <div className='inner'>
-            {/*<Categories/>*/}
             <section className="tiles">
-                <article className="style1">
-                        <span className="image">
-                            <img src="images/product-1-720x480.jpg" alt=""/>
-                        </span>
-                    <Link to="/car_details">
-                        {/*<h2>Lorem ipsum dolor sit amet, consectetur</h2>*/}
-
-                        {/*<p>*/}
-                        {/*    <del>$11 999</del>*/}
-                        {/*    <strong>$11 779</strong></p>*/}
-
-                        {/*<p>*/}
-                        {/*    <i className="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;&nbsp;*/}
-                        {/*    <i className="fa fa-cube"></i> 1800 cc&nbsp;&nbsp;&nbsp;&nbsp;*/}
-                        {/*    <i className="fa fa-cog"></i> Manual*/}
-                        {/*</p>*/}
-                    </Link>
-                </article>
-                <article className="style2">
-                        <span className="image">
-                            <img src="images/product-2-720x480.jpg" alt=""/>
-                        </span>
-                    <Link to="/car_details">
-                        <h2>Lorem ipsum dolor sit amet, consectetur</h2>
-
-                        <p>
-                            <del>$11 999</del>
-                            <strong>$11 779</strong></p>
-
-                        <p>
-                            <i className="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;&nbsp;
-                            <i className="fa fa-cube"></i> 1800 cc&nbsp;&nbsp;&nbsp;&nbsp;
-                            <i className="fa fa-cog"></i> Manual
-                        </p>
-                    </Link>
-                </article>
+                {getCars.map((item, i) => {
+                    if( i < 3) {
+                        return (
+                            <article key={i}>
+                            <span className="image">
+                                {item.images.length > 0 ?  <img src={'http://127.0.0.1:8000' + item.images[0]}
+                                                                alt="car photo"/> : <img src={'http://127.0.0.1:8000'
+                                + '/media/cars/notFoundImage.png'} alt="car photo"/>}
+                            </span>
+                                <Link to={{pathname: `/car_details/${item.id}`, id: item.id}}>
+                                    <h2>{item.title}</h2>
+                                    <p>
+                                        <del>${item.price}</del>
+                                        <strong>${item.price - 2000}</strong></p>
+                                    <p>
+                                        <i className="fa fa-dashboard"></i> {}km &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <i className="fa fa-cube"></i> 1800 cc&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <i className="fa fa-cog"></i> Manual
+                                    </p>
+                                </Link>
+                            </article>
+                        )
+                    }
+                })}
             </section>
+            <div style={{display: "flex", justifyContent: "center", marginTop: 20}}>
+                <Link to="/cars"><button>Подробнее <i className='fa fa-long-arrow-right'></i></button></Link>
+            </div>
         </div>
     )
 }

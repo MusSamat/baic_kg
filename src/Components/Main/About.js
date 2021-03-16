@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const About = () => {
     return (
@@ -9,6 +10,7 @@ const About = () => {
                         <div className="about_item1">
                             For developers, by Developers
                         </div>
+
                         <h2 className="about_theme">
                             Simple Integration
                         </h2>
@@ -22,8 +24,8 @@ const About = () => {
                             sandbox keys.
                         </div>
                         <div className="about_buttons">
-                            <button className='btn1'>Оставить заявку</button>
-                            <button style={{borderRadius: 12}}> Наш каталог</button>
+                            <Link to="/about"><button className='btn1'>Читать подробнее</button></Link>
+                            <Link to="/cars"><button style={{borderRadius: 12}}> Наш каталог</button></Link>
                         </div>
 
                     </div>
@@ -43,25 +45,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-
-
-                {/*    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque*/}
-                {/*        venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor*/}
-                {/*        sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu*/}
-                {/*        massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris.*/}
-                {/*        Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis,*/}
-                {/*        hendrerit tristique.</p>*/}
-                {/*    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent*/}
-                {/*        taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique*/}
-                {/*        libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut*/}
-                {/*        ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor.*/}
-                {/*        Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique*/}
-                {/*        senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus.*/}
-                {/*        Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>*/}
-                {/*    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet*/}
-                {/*        dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque*/}
-                {/*        leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum*/}
-                {/*        convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>*/}
             </div>
         </div>
     )

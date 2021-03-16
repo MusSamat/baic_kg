@@ -55,7 +55,7 @@ const Footer2 = () => {
                         </div>
 
                         <div className='footer_img'>
-                            <img src="./images/svgFiles/list.svg" alt="list"/>
+                            <img src="/./images/svgFiles/list.svg" alt="list"/>
                         </div>
                     </div>
                 </div>

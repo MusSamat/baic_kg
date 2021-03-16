@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
-import Banner from "../Components/Main/Banner";
 import Contacts from "../Components/Main/Contacts";
 import Footer2 from "../Components/Footer/Footer2";
+import Carousel from "../Components/Main/Carousel";
 
 
 
@@ -13,7 +13,7 @@ const ContactsP = () => {
         <>
             <div id="main" >
                 <div className="inner">
-                    <Banner/>
+                    <Carousel/>
                     <Contacts/>
                 </div>
             </div>

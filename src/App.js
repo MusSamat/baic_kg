@@ -11,6 +11,7 @@ import TestimonialsP from "./Views/TestimonialsP";
 import ContactsP from "./Views/ContactsP";
 import CarsP from "./Views/CarsP";
 import Car_detailsP from "./Views/Car_detailsP";
+import BlogP from "./Views/BlogP";
 
 
 class App extends React.Component {
@@ -25,9 +26,10 @@ class App extends React.Component {
                         <Route exact path='/cars' component={CarsP}/>
                         <Route exact path='/about' component={AboutP}/>
                         <Route exact path='/team' component={TeamP}/>
+                        <Route exact path='/blog' component={BlogP}/>
                         <Route exact path='/testimonials' component={TestimonialsP}/>
                         <Route exact path='/contacts' component={ContactsP}/>
-                        <Route exact path='/car_details' component={Car_detailsP}/>
+                        <Route exact path='/car_details/:id' component={Car_detailsP}/>
                     </Switch>
                 </div>
             </Router>

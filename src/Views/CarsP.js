@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react'
 import Banner from "../Components/Main/Banner";
-import Cars from "../Components/Main/Cars";
+// import Cars from "../Components/Main/Cars";
 import Footer2 from "../Components/Footer/Footer2";
 import Categories from "../Components/Main/Category/Categories";
+import Carousel from "../Components/Main/Carousel";
 
 
 
@@ -15,10 +16,8 @@ const CarsP = () => {
                 <div id="main"  >
                     <a id="start"></a>
                     <div className="inner">
-                        <h1>Cars</h1>
-                        <Banner/>
+                        <Carousel/>
                         <Categories/>
-                        <Cars/>
                     </div>
                 </div>
                 <div  id='footer' className='inner'>
