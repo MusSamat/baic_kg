@@ -3,7 +3,7 @@ import React from "react";
 class GetData extends React.Component {
     constructor() {
         super();
-        this._apiBase = process.env.REACT_APP_API_KEY
+        this._apiBase = process.env.REACT_APP_API
     }
 
     async getData(url) {
