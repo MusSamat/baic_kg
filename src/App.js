@@ -31,6 +31,7 @@ class App extends React.Component {
                         <Route exact path='/testimonials/:id' component={TestimonialsP}/>
                         <Route exact path='/contacts' component={ContactsP}/>
                         <Route exact path='/car_details/:id' component={Car_detailsP}/>
+                        <Route exact path='*' component={HomeP}/>
                     </Switch>
                 </div>
             </Router>

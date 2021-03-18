@@ -3003,9 +3003,9 @@ input, select, textarea {
 
 					@media screen and (max-width: 736px) {
 
-						.about_scItem{
-							display: none;
-						}
+						/*.about_scItem{*/
+						/*	display: none;*/
+						/*}*/
 
 						 .about_scItem .about_scAllItems{
 							display: flex;
@@ -3018,9 +3018,9 @@ input, select, textarea {
 							text-align: center;
 						}
 
-						.about_buttons .btn2 {
-							display: none;
-						}
+						/*.about_buttons .btn2 {*/
+						/*	display: none;*/
+						/*}*/
 						.about_buttons{
 							margin: 20px 0;
 							display: flex;

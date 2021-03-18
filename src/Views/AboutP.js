@@ -32,7 +32,7 @@ const AboutP = () => {
                                     sandbox keys.
                                 </div>
                                 <div className="about_buttons">
-                                    <Link to="/about"><button className='btn1'>Читать подробнее</button></Link>
+                                    <Link to="/cars"><button className='btn2'> Наш каталог</button></Link>
                                 </div>
                             </div>
 
