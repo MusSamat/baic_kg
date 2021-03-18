@@ -2807,8 +2807,8 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding-top: 15px;
-		/*margin-bottom: 20px;*/
+		/*padding-top: 15px;*/
+		margin-bottom: 20px;
 		max-height: 100px;
 		background-color: #0F2336;
 	}
@@ -2819,16 +2819,22 @@ input, select, textarea {
 			color: white;
 			font-weight: 900;
 			letter-spacing: 0.35em;
-			margin: 0 0 2.5em 0;
+			/*margin: 0 0 2.5em 0;*/
 			text-decoration: none;
 			text-transform: uppercase;
 			display: inline-block;
 
 		}
+			#header .logo-text{
+				padding-top: 20px;
+			}
 
 			#header .logo > * {
-				display: inline-block;
-				vertical-align: middle;
+				display: flex;
+				flex-direction: row;
+				justify-content: start;
+				/*display: inline-block;*/
+				/*vertical-align: middle;*/
 			}
 
 			#header .logo .symbol {
@@ -2930,7 +2936,11 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 4em 0 0.1em 0 ;
+				padding: 1em 0 0.1em 0 ;
+			}
+
+			#header .logo .logo-text{
+				display: none;
 			}
 
 				#header nav {
@@ -2948,55 +2958,84 @@ input, select, textarea {
 
 /*About*/
 
-	.about{
-		min-height: 600px;
-		padding-top: 80px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		color: #0F2336;
-	}
-		.about .about_title {
+		.about_title {
 			display: flex;
 			flex-direction: column;
 		}
-			.about .about_item1 {
+			 .about_item1 {
 				font-size: 18px;
 				text-align: start;
 				color: #00CCCC;
 			}
-			.about .about_theme {
+			.about_theme {
 				font-size: 42px;
 				color: #0F2336;
 			}
-			.about  .about_desc{
+			 .about_desc{
 				max-width: 350px;
 			}
 
-			.about .about_buttons {
+			.about_buttons {
 				display: flex;
 				flex-direction: row;
 				gap: 20px;
 				margin-top: 25px;
 			}
-				.about .about_buttons .btn1 {
+				 .about_buttons .btn1 {
 					border-radius: 12px;
 					background-color: #0F2336;
 					color: #00CCCC;
+					 margin-right: 20px;
 				}
 
-				.about .about_scItem {
+				  .about_scItem {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-around;
 					max-width: 400px;
 				}
-				.about .about_scItem .about_scAllItems{
+				.about_scItem .about_scAllItems{
+					margin-top: 50px;
 					display: flex;
 					flex-direction: row;
 					gap: 20px;
 				}
+
+					@media screen and (max-width: 736px) {
+
+						.about_scItem{
+							display: none;
+						}
+
+						 .about_scItem .about_scAllItems{
+							display: flex;
+							flex-direction: column;
+							margin-top: 30px;
+						}
+
+						.about_scItem .about_scAllItems > div{
+							margin-top: 20px;
+							text-align: center;
+						}
+
+						.about_buttons .btn2 {
+							display: none;
+						}
+						.about_buttons{
+							margin: 20px 0;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+						}
+					}
+						@media screen and (max-width: 480px) {
+							.row {
+								margin-top: 50px;
+								margin-left: -1em;
+							}
+						}
 	/* Menu */
+
 
 	#wrapper {
 		-moz-transition: opacity 0.45s ease;
@@ -3224,7 +3263,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 1.5em 0 1.5em 0 ;
+		padding: 1.5em 0 0 0 ;
 		background-color: #0F2336;
 		color: white;
 	}
@@ -3248,6 +3287,7 @@ input, select, textarea {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
+			justify-content: center;
 		}
 
 			#footer > .inner > * > :last-child {
@@ -3326,7 +3366,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 3em 0 1em 0 ;
+				padding: 1em 0 1em 0 ;
 			}
 
 				#footer > .inner {
@@ -3400,6 +3440,21 @@ input, select, textarea {
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
 	color: #00CCCC;
 	background-color: #0F2336;
+}
+
+.review {
+	padding: 20px;
+}
+
+.review .position{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.review_text {
+	margin-top: 40px;
+	padding: 0 0 0 50px;
+	border-left: 5px solid #00CCCC;
 }
 
 .nav-tabs {

@@ -1,20 +1,21 @@
-import React, {useEffect} from 'react'
-import Contacts from "../Components/Main/Contacts";
-import Footer from "../Components/Footer/Footer";
-import Carousel from "../Components/Main/Carousel";
+import React, {useEffect, useState} from "react";
+import Blog_id from "./Blog_id";
+import Carousel from "../Carousel";
+import Footer from "../../Footer/Footer";
 
+const BlogP = ({match}) => {
+    const id = match.params.id
 
-
-const ContactsP = () => {
     useEffect(() => {
         window.scrollTo(0,0)
-    })
-    return(
+    }, [])
+
+    return (
         <>
             <div id="main" >
                 <div className="inner">
                     <Carousel/>
-                    <Contacts/>
+                    <Blog_id id={id}/>
                 </div>
             </div>
             <div  id='footer' className='inner'>
@@ -24,4 +25,4 @@ const ContactsP = () => {
     )
 }
 
-export default ContactsP
+export default BlogP

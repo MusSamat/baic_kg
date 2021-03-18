@@ -1,10 +1,11 @@
 import React, {useEffect} from 'react'
-import Banner from "../Components/Main/Banner";
-import Testimonials from "../Components/Main/Testimonials/Testimonials";
-import Footer2 from "../Components/Footer/Footer2";
-import Team from "../Components/Main/Team";
+import Footer from "../Components/Footer/Footer";
+import Testimonial_id from "../Components/Main/Testimonials/Testimonial_id";
+import Carousel from "../Components/Main/Carousel";
 
-const TestimonialsP = () => {
+const TestimonialsP = ({match}) => {
+
+    const id = match.params.id
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -14,12 +15,12 @@ const TestimonialsP = () => {
         <>
             <div id="main" >
                 <div className="inner">
-                    <Banner/>
-                    <Testimonials/>
+                    <Carousel/>
+                    <Testimonial_id id={id}/>
                 </div>
             </div>
             <div  id='footer' className='inner'>
-                <Footer2/>
+                <Footer/>
             </div>
         </>
     )

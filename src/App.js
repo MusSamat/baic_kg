@@ -12,7 +12,7 @@ import ContactsP from "./Views/ContactsP";
 import CarsP from "./Views/CarsP";
 import Car_detailsP from "./Views/Car_detailsP";
 import BlogP from "./Views/BlogP";
-
+import Blog_details from "./Components/Main/Blog/Blogs";
 
 class App extends React.Component {
     render() {
@@ -25,9 +25,10 @@ class App extends React.Component {
                         <Route exact path='/' component={HomeP}/>
                         <Route exact path='/cars' component={CarsP}/>
                         <Route exact path='/about' component={AboutP}/>
-                        <Route exact path='/team' component={TeamP}/>
+                        {/*<Route exact path='/team' component={TeamP}/>*/}
                         <Route exact path='/blog' component={BlogP}/>
-                        <Route exact path='/testimonials' component={TestimonialsP}/>
+                        <Route exact path='/blog_details/:id' component={Blog_details}/>
+                        <Route exact path='/testimonials/:id' component={TestimonialsP}/>
                         <Route exact path='/contacts' component={ContactsP}/>
                         <Route exact path='/car_details/:id' component={Car_detailsP}/>
                     </Switch>

@@ -11,9 +11,12 @@ const Categories = () => {
     const [cars, setCars] = useState([])
     const [key, setKey] = useState('');
     useEffect(() => {
+        window.scrollTo(0,0)
         getCategories.getData('/api/v1/category').then(res => {
             setCategories(res)
-            setKey(res[0].title)
+            if(res.length > 0){
+                setKey(res[0].title)
+            }
         })
 
         getCategories.getData('/api/v1/car').then(res => {

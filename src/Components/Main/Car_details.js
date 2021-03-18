@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import GetData from "../../services/GetData";
 
 const Car_details = (props) => {
-    console.log(props.id)
     const getCarDet = new GetData()
 
     const [cars, setCars] = useState({feature: []})

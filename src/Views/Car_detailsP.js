@@ -1,12 +1,11 @@
 import React, {useEffect} from 'react'
 import Car_details from "../Components/Main/Car_details";
-import Footer2 from "../Components/Footer/Footer2";
+import Footer from "../Components/Footer/Footer";
 
 
 const   Car_detailsP = ({match}) => {
 
    const {id} = match.params
-    console.log(id)
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -20,7 +19,7 @@ const   Car_detailsP = ({match}) => {
                 </div>
             </div>
             <div  id='footer' className='inner'>
-                <Footer2/>
+                <Footer/>
             </div>
         </>
     )

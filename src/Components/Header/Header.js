@@ -6,8 +6,11 @@ const Header = () => {
         <header id="header" >
             <div className="inner">
                 <Link to="/" className="logo">
-                    <span><img src="/./images/baic/baic_logo.png" alt="baic" style={{width: 120, height: 70}}/></span>
-                    <span>BAIC Motors</span>
+                    <div>
+                        <span><img src="/./images/baic/baic_logo.png" alt="baic" style={{maxWidth: 120, maxHeight: 70}}/></span>
+                        <span className='logo-text'>BAIC Motors</span>
+                    </div>
+
                 </Link>
                 <nav>
                     <ul>

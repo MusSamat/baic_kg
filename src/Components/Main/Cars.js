@@ -15,8 +15,6 @@ const Cars = () => {
     }, [])
 
 
-    console.log(getCars.length)
-
     return (
         <div className='inner'>
             <section className="tiles">
@@ -45,7 +43,7 @@ const Cars = () => {
                     }
                 })}
             </section>
-            <div style={{display: "flex", justifyContent: "center", marginTop: 20}}>
+            <div style={{display: "flex", justifyContent: "center", marginTop: 20, marginBottom: 20}}>
                 <Link to="/cars"><button>Подробнее <i className='fa fa-long-arrow-right'></i></button></Link>
             </div>
         </div>

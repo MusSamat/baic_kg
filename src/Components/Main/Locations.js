@@ -19,7 +19,7 @@ const Locations = () =>  {
             <div style={{width:'100%', height:'70%', position:'relative'}} >
                 <YMaps >
                     <Map  width='100%' height='100%'  defaultState={mapData} >
-                        {coordinates.map(coordinate => <Placemark geometry={coordinate} />)}
+                        {coordinates.map((coordinate,i) => <Placemark geometry={coordinate}  key={i}/>)}
                     </Map>
                 </YMaps>
             </div>

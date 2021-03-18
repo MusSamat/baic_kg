@@ -16,9 +16,9 @@ const Menu = () => {
                     <li><Link to="/"  exact={true} activeStyle={{color: 'f2849e'}}>Главная</Link></li>
                     <li><Link to='/cars' activeStyle={{color: 'f2849e'}}>Наши автомобили</Link></li>
                     <li><Link  to="/about">О нас</Link></li>
-                    <li><Link to="/team">Наша Команда</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/testimonials">Отзывы</Link></li>
+                    {/*<li><Link to="/team">Наша Команда</Link></li>*/}
+                    <li><Link to="/blog">Блог</Link></li>
+                    {/*<li><Link to="/testimonials">Отзывы</Link></li>*/}
                     <li><Link to="/contacts">Контакты</Link></li>
                 </ul>
             </div>
