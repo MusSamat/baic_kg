@@ -1,9 +1,10 @@
 import React from "react";
+// const _apiBase = process.env.REACT_APP_API_KEY
 
 class GetData extends React.Component {
     constructor() {
         super();
-        this._apiBase = process.env.REACT_APP_API_KEY
+        this._apiBase = "http://176.126.167.88:8009"
     }
 
     async getData(url) {
@@ -13,14 +14,6 @@ class GetData extends React.Component {
         })
         return res.json()
     }
-
-    async getFile(fileName) {
-        const token = JSON.parse(localStorage.getItem("user"))
-        return await fetch(`${this._apiBase}/api/v1/categories/file/${fileName}`,{
-            method: 'GET',
-        })
-    }
-
 
 }
 export default GetData
