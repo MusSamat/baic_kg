@@ -37,20 +37,20 @@ const Car_details = (props) => {
                                 })}
 
                             </ol>
-                            <div className="carousel-inner">
+                            <div className="carousel-inner auto-img">
 
                                 {image.map((item, i) => {
                                     if (i === 0) {
                                         return (
                                             <div className="carousel-item active" key={i}>
-                                                <img className="d-block w-100" src={'http://127.0.0.1:8000' + item}
+                                                <img className="d-block w-100" src={getCarDet._apiBase + item}
                                                      alt={i + "slide"}/>
                                             </div>
                                         )
                                     } else {
                                         return (
                                             <div className="carousel-item" key={i}>
-                                                <img className="d-block w-100" src={'http://127.0.0.1:8000' + item}
+                                                <img className="d-block w-100" src={getCarDet._apiBase + item}
                                                      alt={i + "slide"}/>
                                             </div>
                                         )
@@ -100,76 +100,70 @@ const Car_details = (props) => {
                         </div>
                     </div>
 
-                    <div className="field quarter">
-                        <div className="cars-info">
-                            <label className="m-n">Цена:</label>
-                            <i className="fa fa-credit-card" aria-hidden="true"></i>
-                        </div>
+                    {/*<div className="field quarter">*/}
+                    {/*    <div className="cars-info">*/}
+                    {/*        <label className="m-n">Цена:</label>*/}
+                    {/*        <i className="fa fa-credit-card" aria-hidden="true"></i>*/}
+                    {/*    </div>*/}
 
+                    {/*    <div className="border-item">*/}
+                    {/*        {cars.price}*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
+                    <div className="field quarter">
+                        <label className="m-n">Кузов:</label>
                         <div className="border-item">
-                            {cars.price}
+                            {cars.car_body}
                         </div>
                     </div>
 
                     <div className="field quarter">
-                        <label className="m-n">Батарея:</label>
+                        <label className="m-n">Мощность двигателя::</label>
                         <div className="border-item">
-                            {cars.battery}
+                            {cars.battery_power}
                         </div>
                     </div>
 
                     <div className="field quarter">
-                        <label className="m-n">Трансмиссия:</label>
-                        <div className="border-item">
-                            {cars.drivetrain}
-                        </div>
-                    </div>
-
-                    <div className="field quarter">
-                        <label className="m-n">Объем багажника:</label>
-                        <div className="border-item">
-                            {cars.trunk_volume}
-                        </div>
-                    </div>
-
-                    <div className="field quarter">
-                        <label className="m-n">Зарядка:</label>
-                        <div className="border-item">
-                            {cars.charging}
-                        </div>
-                    </div>
-
-                    <div className="field quarter">
-                        <label className="m-n">Диапазон:</label>
-                        <div className="border-item">
-                            {cars.rang}
-                        </div>
-                    </div>
-
-                    <div className="field quarter">
-                        <label className="m-n">Крутящий момент:</label>
-                        <div className="border-item">
-                            {cars.torque}
-                        </div>
-                    </div>
-                    <div className="field quarter">
-                        <label className="m-n">Максимальная скорость:</label>
+                        <label className="m-n">Макс.скорость:</label>
                         <div className="border-item">
                             {cars.max_speed}
                         </div>
                     </div>
+
                     <div className="field quarter">
-                        <label className="m-n">Фаркоп: (кг)</label>
+                        <label className="m-n">Дальность хода: </label>
                         <div className="border-item">
-                            {cars.tow_bar}
+                            {cars.travel_range}
+                        </div>
+                    </div>
+
+                    <div className="field quarter">
+                        <label className="m-n">Мощность батареи: </label>
+                        <div className="border-item">
+                            {cars.engine_power}
+                        </div>
+                    </div>
+
+                    <div className="field quarter">
+                        <label className="m-n">Время зарядки: </label>
+                        <div className="border-item">
+                            {cars.charging_time}
                         </div>
                     </div>
                     <div className="field quarter">
-                        <label className="m-n">Цвет:</label>
+                        <label className="m-n">Клиренс:</label>
                         <div className="border-item">
-                            {cars.color}
+                            {cars.clearance}
                         </div>
                     </div>
+                    {/*<div className="field quarter">*/}
+                    {/*    <label className="m-n">Фаркоп: (кг)</label>*/}
+                    {/*    <div className="border-item">*/}
+                    {/*        {cars.created_ad}*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
             </form>
 

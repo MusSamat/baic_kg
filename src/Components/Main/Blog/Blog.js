@@ -21,9 +21,9 @@ const Blog = () => {
                 {blog.map((item, i) => {
                     if (i < 3 ){
                         return(
-                            <div className="col-sm-4 text-center" key={i}>
+                            <div className="col-sm-4 text-center image" key={i}>
                                 <div style={{marginBottom: 20}}>
-                                    <img src={'http://127.0.0.1:8000'+ item.image} className="img-fluid"  alt="fjalksd"/>
+                                    <img src={getBlog._apiBase+ item.image} className="img-fluid"  alt="fjalksd"/>
                                 </div>
                                 <Link to={{pathname: `/blog_details/${item.id}`, id: item.id}}>
                                     <h2 className="m-n"> {item.title}</h2>

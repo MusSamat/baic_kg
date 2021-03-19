@@ -23,7 +23,7 @@ const Cars = () => {
                         return (
                             <article key={i}>
                             <span className="image">
-                                {item.images.length > 0 ?  <img src={'http://127.0.0.1:8000' + item.images[0]}
+                                {item.images.length > 0 ?  <img src={getAllCars._apiBase + item.images[0]}
                                                                 alt="car photo"/> : <img src={'http://127.0.0.1:8000'
                                 + '/media/cars/notFoundImage.png'} alt="car photo"/>}
                             </span>
@@ -31,7 +31,7 @@ const Cars = () => {
                                     <h2>{item.title}</h2>
                                     <p>
                                         <del>${item.price}</del>
-                                        <strong>${item.price - 2000}</strong></p>
+                                        <strong>${item.price - 200}</strong></p>
                                     <p>
                                         <i className="fa fa-dashboard"></i> {}km &nbsp;&nbsp;&nbsp;&nbsp;
                                         <i className="fa fa-cube"></i> 1800 cc&nbsp;&nbsp;&nbsp;&nbsp;

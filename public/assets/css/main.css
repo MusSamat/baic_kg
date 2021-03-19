@@ -2312,17 +2312,27 @@ input, select, textarea {
 		}
 
 /* Image */
+	.carousel-img {
+		height: 500px;
+	}
+	.carousel-img img {
+		width: 100%;
+		height: 100%;
+	}
 
 	.image {
 		border-radius: 4px;
 		border: 0;
 		display: inline-block;
 		position: relative;
+		height: 250px;
 	}
 
 		.image img {
 			border-radius: 4px;
 			display: block;
+			width: 100%;
+			height: 100%;
 		}
 
 		.image.left, .image.right {
@@ -2807,8 +2817,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		/*padding-top: 15px;*/
-		margin-bottom: 20px;
+		padding-top: 15px;
 		max-height: 100px;
 		background-color: #0F2336;
 	}
@@ -2955,10 +2964,18 @@ input, select, textarea {
 		}
 
 
+.auto-img {
+	width: 100%;
+	height: 400px;
+}
+.auto-img {
+	width: 100%;
+	height: 100%;
+}
 
 /*About*/
-
 		.about_title {
+			padding-top: 30px;
 			display: flex;
 			flex-direction: column;
 		}
@@ -2989,10 +3006,11 @@ input, select, textarea {
 				}
 
 				  .about_scItem {
-					display: flex;
-					flex-direction: column;
-					justify-content: space-around;
-					max-width: 400px;
+					  padding-top: 30px;
+					  display: flex;
+					  flex-direction: column;
+					  justify-content: space-around;
+					  max-width: 400px;
 				}
 				.about_scItem .about_scAllItems{
 					margin-top: 50px;

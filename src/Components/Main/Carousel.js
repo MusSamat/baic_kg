@@ -31,17 +31,17 @@ const Carousel = () => {
                 {bannerImage.map((item, i) => {
                     if(i === 0){
                         return (
-                            <div className="carousel-item active" key={i}>
-                                { item.image.length > 0 ? <img className="d-block w-100 "  src={'http://127.0.0.1:8000'
+                            <div className="carousel-item active carousel-img" key={i}>
+                                { item.image.length > 0 ? <img className="d-block w-100 "  src={getBannerImage._apiBase
                                 + item.image} alt={i + 'slide'}/> :
-                                    <img src={'http://127.0.0.1:8000'
+                                    <img src={getBannerImage._apiBase
                                     + '/media/cars/notFoundImage.png'} alt="car photo"/>}
                             </div>
                         )
                     }else {
                         return (
                             <div className="carousel-item" key={i}>
-                                <img className="d-block w-100 "  src={'http://127.0.0.1:8000' + item.image} alt={item.id + 'slide'}/>
+                                <img className="d-block w-100 "  src={getBannerImage._apiBase + item.image} alt={item.id + 'slide'}/>
                             </div>
                         )
                     }

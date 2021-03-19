@@ -41,9 +41,9 @@ const Categories = () => {
                                         <article key={i}>
                                             <span className="image">
                                                 {car.images.length > 0 ?
-                                                    <img src={'http://127.0.0.1:8000' + car.images[0]}
+                                                    <img src={getCategories._apiBase + car.images[0]}
                                                          alt="car photo"/> :
-                                                    <img src={'http://127.0.0.1:8000' + '/media/cars/notFoundImage.png'}
+                                                    <img src={getCategories._apiBase + '/media/cars/notFoundImage.png'}
                                                          alt="car photo"/>
                                                 }
                                             </span>
