@@ -2993,10 +2993,19 @@ input, select, textarea {
 	width: 100%;
 	height: 400px;
 }
-.auto-img {
+.auto-img  img{
 	width: 100%;
 	height: 100%;
 }
+
+
+@media screen and (max-width: 580px){
+	.auto-img {
+		width: 100%;
+		height: 200px;
+	}
+}
+
 
 /*About*/
 		.about_title {

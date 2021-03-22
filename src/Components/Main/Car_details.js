@@ -37,19 +37,19 @@ const Car_details = (props) => {
                                 })}
 
                             </ol>
-                            <div className="carousel-inner auto-img">
+                            <div className="carousel-inner ">
 
                                 {image.map((item, i) => {
                                     if (i === 0) {
                                         return (
-                                            <div className="carousel-item active" key={i}>
+                                            <div className="carousel-item active auto-img" key={i}>
                                                 <img className="d-block w-100" src={getCarDet._apiBase + item}
                                                      alt={i + "slide"}/>
                                             </div>
                                         )
                                     } else {
                                         return (
-                                            <div className="carousel-item" key={i}>
+                                            <div className="carousel-item auto-img" key={i}>
                                                 <img className="d-block w-100" src={getCarDet._apiBase + item}
                                                      alt={i + "slide"}/>
                                             </div>
@@ -92,7 +92,7 @@ const Car_details = (props) => {
                 <div className="fields">
                     <div className="field quarter">
                         <div className="cars-info">
-                            <label className="m-n">Название:</label>
+                            <label className="m-n">Производитель:</label>
                             <i className="fa fa-address-card-o" aria-hidden="true"></i>
                         </div>
                         <div className="border-item">
