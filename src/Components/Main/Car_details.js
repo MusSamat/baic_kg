@@ -71,8 +71,8 @@ const Car_details = (props) => {
                     </div>
 
                     <div className="col-lg-5">
-                        <h3 style={{paddingLeft: 40}}> Функции</h3>
-                        <ul style={{paddingLeft: 40}}>
+                        <h3 style={{paddingLeft: 30}}> Функции</h3>
+                        <ul style={{paddingLeft: 25, listStyleType: 'none'}}>
                             {cars.feature.map((item, i) => (
                                  <li key={i}>
                                      <img src="/./images/svgFiles/todo.svg" alt="todo" style={{paddingRight: 20}} />
@@ -99,17 +99,6 @@ const Car_details = (props) => {
                             {cars.category}
                         </div>
                     </div>
-
-                    {/*<div className="field quarter">*/}
-                    {/*    <div className="cars-info">*/}
-                    {/*        <label className="m-n">Цена:</label>*/}
-                    {/*        <i className="fa fa-credit-card" aria-hidden="true"></i>*/}
-                    {/*    </div>*/}
-
-                    {/*    <div className="border-item">*/}
-                    {/*        {cars.price}*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
 
                     <div className="field quarter">
                         <label className="m-n">Кузов:</label>
