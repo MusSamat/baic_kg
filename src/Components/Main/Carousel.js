@@ -40,7 +40,7 @@ const Carousel = () => {
                         )
                     }else {
                         return (
-                            <div className="carousel-item" key={i}>
+                            <div className="carousel-item carousel-img"  key={i}>
                                 <img className="d-block w-100 "  src={getBannerImage._apiBase + item.image} alt={item.id + 'slide'}/>
                             </div>
                         )

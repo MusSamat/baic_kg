@@ -21,9 +21,9 @@ const Blog = () => {
                 {blog.map((item, i) => {
                     if (i < 3 ){
                         return(
-                            <div className="col-sm-4 text-center image" key={i}>
-                                <div style={{marginBottom: 20}}>
-                                    <img src={getBlog._apiBase+ item.image} className="img-fluid"  alt="fjalksd"/>
+                            <div className="col-sm-4 text-center" key={i}>
+                                <div style={{marginBottom: 20}} className="blog-image">
+                                    <img src={getBlog._apiBase+ item.image} alt="fjalksd"/>
                                 </div>
                                 <Link to={{pathname: `/blog_details/${item.id}`, id: item.id}}>
                                     <h2 className="m-n"> {item.title}</h2>
@@ -35,7 +35,7 @@ const Blog = () => {
                     }
                 })}
             </div>
-            <div style={{display: "flex", justifyContent: "center", marginTop: 20, marginBottom: 20}}>
+            <div style={{display: "flex", justifyContent: "center", marginTop: 50, marginBottom: 20}}>
                 <Link to="/blog"><button>Подробнее <i className='fa fa-long-arrow-right'></i></button></Link>
             </div>
         </div>

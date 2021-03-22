@@ -27,7 +27,7 @@ const Testimonials = () => {
         >
                 {review.map((review, i) => (
                         <div key={i}>
-                            <img src={getBlog._apiBase + '/media/cars/person2.png'}
+                            <img src={getBlog._apiBase + review.image}
                                  alt="car photo"/>
                             <Link to={{pathname: `/testimonials/${review.id}`, id: review.id}}>
                                      <div className="myCarousel">

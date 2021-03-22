@@ -27,8 +27,8 @@ const BlogP = () => {
                     <div className="row">
                         {blog.map((item, i) => (
                             <div className="col-sm-4 text-center" key={i}>
-                                <div style={{marginBottom: 20}}>
-                                    <img src={getBlog._apiBase+ item.image} className="img-fluid"  alt="fjalksd"/>
+                                <div style={{marginBottom: 20}}  className="blog-image">
+                                    <img src={getBlog._apiBase + item.image}   alt="Электромашины"/>
                                 </div>
                                 <Link to={{pathname: `/blog_details/${item.id}`, id: item.id}}>
                                     <h2 className="m-n"> {item.title}</h2>

@@ -2313,12 +2313,37 @@ input, select, textarea {
 
 /* Image */
 	.carousel-img {
-		height: 500px;
+		min-height: 500px;
 	}
 	.carousel-img img {
 		width: 100%;
 		height: 100%;
 	}
+
+
+@media screen and (max-width: 992px){
+	.carousel-img {
+		min-height: 300px;
+	}
+}
+
+@media screen and (max-width: 580px){
+	.carousel-img {
+		min-height: 125px;
+	}
+}
+
+
+
+	.blog-image{
+		height: 250px;
+	}
+	.blog-image img{
+		height: 100%;
+		width: 100%;
+	}
+
+
 
 	.image {
 		border-radius: 4px;
