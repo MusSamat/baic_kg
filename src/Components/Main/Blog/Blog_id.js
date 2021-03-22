@@ -15,7 +15,7 @@ const Blog_id = (props) => {
 
     return (
         <div className='row'>
-            <div className='col-12 col-sm-12'>
+            <div className='col-12 col-sm-12 blog_id_image'>
                 <div dangerouslySetInnerHTML={{__html: blog.description}}/>
             </div>
         </div>

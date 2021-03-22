@@ -3007,6 +3007,27 @@ input, select, textarea {
 }
 
 
+	.blog_id_image {
+		width: 100vw !important;
+		/*height: ;*/
+	}
+	.blog_id_image h4  {
+		width: 100vw !important;
+	}
+
+	.blog_id_image img{
+		width: 100% !important;
+		height: 100% !important;
+	}
+
+
+@media screen and (max-width: 580px){
+	.auto-img {
+		width: 100vw !important;
+		height: 200px;
+	}
+}
+
 /*About*/
 		.about_title {
 			padding-top: 30px;
