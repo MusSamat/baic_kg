@@ -4,7 +4,7 @@ import React from "react";
 class GetData extends React.Component {
     constructor() {
         super();
-        this._apiBase = "http://176.126.167.88:8009"
+        this._apiBase = "http://176.126.164.191:8080"
     }
 
     async getData(url) {
